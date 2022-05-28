@@ -245,6 +245,8 @@ img {
     transform: translate(-50%, -50%);
     
     width: 528px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
     background-color: var(--bgr-color);
     text-align: center;   
 }
@@ -259,6 +261,7 @@ img {
     margin: 0;   
     width: 30px;
     height: 30px;
+    background-color: var(--bgr-color);
     border: 1px solid #AFB1B8;     
     border-radius: 50%; 
     cursor: pointer;
@@ -326,6 +329,7 @@ textarea:focus {
 }
 textarea {
     padding: 12px 16px;
+    resize: none;
 }
 .submit-btn {
     margin: 0 auto;
@@ -367,7 +371,7 @@ textarea {
     text-align: left;
 }
 .stile-agree {
-  color: #757575;  
+    color: #757575;  
     font-size: 14px;
     font-weight: 400;
     line-height: 1.71;
@@ -387,7 +391,7 @@ textarea {
     appearance: none;
     position: absolute;
 }                                   
-.checkbox-icon {
+.policy-icon {
     display: inline-block;
     margin-right: 4px;
     width: 16px;
@@ -396,7 +400,7 @@ textarea {
     border: 2px solid #212121;
     border-radius: 3px;
 }
-.checkbox:checked + .checkbox-icon {
+.checkbox:checked + .policy-icon {
     background-color: #2196F3;
     background-image: url('../images/icon-checkbox.svg');
     border: 2px solid transparent;
@@ -589,7 +593,7 @@ textarea {
     margin-bottom: 0px; 
 }
 .clients-item {
-    margin: 0 auto;
+    margin-right: 30px; 
 }
 .clients-link {
     display: flex;
@@ -597,11 +601,9 @@ textarea {
     justify-content: center;
     width: 170px;
     height: 92px;
-    /*margin-right: 30px;   
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;*/
-    gap: 30px;
+    margin: 0;   
+  
+    /*gap: 30px;*/
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -609,9 +611,9 @@ textarea {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
-/*.clients .clients-link:last-child {
-    margin-right: 0 auto;
-}*/
+.clients-item:last-child {
+    margin-right: 0;
+}
 .clients-link:hover, 
 .clients-link:focus {   
     border-color: #2196f3;
@@ -632,14 +634,15 @@ textarea {
 .footer {
    display: flex;
     background-color: #2F303A; 
-
 }
 .conteiner.footer {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
 }
 .box-logo {
     display: block;
@@ -796,7 +799,7 @@ textarea {
     padding-bottom: 12px;
     outline: none;
    
-
+    color: var(--herotitle) ;
     background-color: #2F303A;
     border: 1px solid #FFFFFF4D;   
     border-radius: 4px;
